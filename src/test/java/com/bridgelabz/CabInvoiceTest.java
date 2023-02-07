@@ -10,6 +10,7 @@ public class CabInvoiceTest {
     void givenDistanceAndTimeShouldReturnTotalFare(){
         double fare = cabInvoice.calculateFare(2.0,5.0);
         Assertions.assertEquals(25,fare);
+        System.out.println("total fare is");
     }
     @Test
     void givenNumberOfRidesShouldReturnTotalFare(){
@@ -23,5 +24,6 @@ public class CabInvoiceTest {
         Invoice actualInvoice = cabInvoice.generateInvoice(arr);
         Invoice expectedInvoice = new Invoice(67.0,3,67.0/3);
         Assertions.assertEquals(expectedInvoice,actualInvoice);
+
     }
 }
